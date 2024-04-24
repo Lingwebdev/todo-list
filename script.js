@@ -81,6 +81,11 @@ function notEditView(list) {
   deleteButtonElement.innerText = "Delete";
   updateButtonElement.innerText = "Update";
 
+  checkBoxElement.className = 'form-check-input me-2';
+  deleteButtonElement.className = 'btn btn-sm btn-danger float-end';
+  updateButtonElement.className = 'btn btn-sm btn-primary float-end mx-2';
+  divElement.className = 'list-group-item';
+
   divElement.appendChild(checkBoxElement);
   divElement.appendChild(labelElement);
   divElement.appendChild(deleteButtonElement);
@@ -103,6 +108,11 @@ function editView() {
       saveButtonElement.type = "submit";
       inputElement.type = 'text';
       inputElement.id = 'update-input';
+
+      divElement.className = 'list-group-item text-center pt-5';
+      inputElement.className = 'form-control';
+      saveButtonElement.className = 'btn btn-dark btn-sm m-3';
+      cancelButtonElement.className = 'btn btn-light bg-light btn-sm m-3';
 
       divElement.appendChild(inputElement);
       divElement.appendChild(saveButtonElement);
